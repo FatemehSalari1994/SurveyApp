@@ -1,0 +1,8 @@
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Queries\bin\Debug\netcoreapp3.1\SurveyApp.Queries.deps.json
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Queries\bin\Debug\netcoreapp3.1\SurveyApp.Queries.dll
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Queries\bin\Debug\netcoreapp3.1\SurveyApp.Queries.pdb
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Queries\obj\Debug\netcoreapp3.1\SurveyApp.Queries.csprojAssemblyReference.cache
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Queries\obj\Debug\netcoreapp3.1\SurveyApp.Queries.AssemblyInfoInputs.cache
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Queries\obj\Debug\netcoreapp3.1\SurveyApp.Queries.AssemblyInfo.cs
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Queries\obj\Debug\netcoreapp3.1\SurveyApp.Queries.dll
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Queries\obj\Debug\netcoreapp3.1\SurveyApp.Queries.pdb
