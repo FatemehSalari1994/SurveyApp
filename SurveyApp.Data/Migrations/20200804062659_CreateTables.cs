@@ -228,15 +228,15 @@ namespace SurveyApp.Data.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    QuestionResponseId = table.Column<int>(nullable: false),
-                    SurveyResponseId = table.Column<int>(nullable: true)
+                    SurveyResponseId = table.Column<int>(nullable: false),
+                    QuestionSelectionId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_QuestionResponses", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_QuestionResponses_QuestionSelections_QuestionResponseId",
-                        column: x => x.QuestionResponseId,
+                        name: "FK_QuestionResponses_QuestionSelections_QuestionSelectionId",
+                        column: x => x.QuestionSelectionId,
                         principalTable: "QuestionSelections",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -245,7 +245,7 @@ namespace SurveyApp.Data.Migrations
                         column: x => x.SurveyResponseId,
                         principalTable: "SurveyResponses",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -288,9 +288,9 @@ namespace SurveyApp.Data.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_QuestionResponses_QuestionResponseId",
+                name: "IX_QuestionResponses_QuestionSelectionId",
                 table: "QuestionResponses",
-                column: "QuestionResponseId");
+                column: "QuestionSelectionId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_QuestionResponses_SurveyResponseId",

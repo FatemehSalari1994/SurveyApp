@@ -10,6 +10,6 @@ namespace SurveyApp.Models
         public int QuestionId { get; set; }
         public string Title { get; set; }
         [ForeignKey("QuestionId")]
-        public Question Question { get; set; }
+        public virtual Question Question { get; set; }
     }
 }

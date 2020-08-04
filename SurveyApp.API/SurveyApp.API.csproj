@@ -12,10 +12,14 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.6" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.3" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SurveyApp.Application\SurveyApp.Application.csproj" />
+    <ProjectReference Include="..\SurveyApp.Commands\SurveyApp.Commands.csproj" />
     <ProjectReference Include="..\SurveyApp.Data\SurveyApp.Data.csproj" />
+    <ProjectReference Include="..\SurveyApp.Queries\SurveyApp.Queries.csproj" />
   </ItemGroup>
 
 

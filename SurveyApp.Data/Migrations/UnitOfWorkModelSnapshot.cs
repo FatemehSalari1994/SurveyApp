@@ -242,15 +242,15 @@ namespace SurveyApp.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("QuestionResponseId")
+                    b.Property<int>("QuestionSelectionId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SurveyResponseId")
+                    b.Property<int>("SurveyResponseId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("QuestionResponseId");
+                    b.HasIndex("QuestionSelectionId");
 
                     b.HasIndex("SurveyResponseId");
 
@@ -383,13 +383,15 @@ namespace SurveyApp.Data.Migrations
                 {
                     b.HasOne("SurveyApp.Models.QuestionSelection", "QuestionSelection")
                         .WithMany()
-                        .HasForeignKey("QuestionResponseId")
+                        .HasForeignKey("QuestionSelectionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("SurveyApp.Models.SurveyResponse", null)
+                    b.HasOne("SurveyApp.Models.SurveyResponse", "SurveyResponse")
                         .WithMany("QuestionResponses")
-                        .HasForeignKey("SurveyResponseId");
+                        .HasForeignKey("SurveyResponseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("SurveyApp.Models.QuestionSelection", b =>

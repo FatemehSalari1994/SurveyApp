@@ -1,8 +1,17 @@
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Commands\bin\Debug\netcoreapp3.1\SurveyApp.Commands.deps.json
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Commands\bin\Debug\netcoreapp3.1\SurveyApp.Commands.runtimeconfig.json
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Commands\bin\Debug\netcoreapp3.1\SurveyApp.Commands.runtimeconfig.dev.json
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Commands\bin\Debug\netcoreapp3.1\SurveyApp.Commands.dll
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Commands\bin\Debug\netcoreapp3.1\SurveyApp.Commands.pdb
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Commands\bin\Debug\netcoreapp3.1\SurveyApp.Application.dll
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Commands\bin\Debug\netcoreapp3.1\SurveyApp.Data.dll
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Commands\bin\Debug\netcoreapp3.1\SurveyApp.Models.dll
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Commands\bin\Debug\netcoreapp3.1\SurveyApp.Application.pdb
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Commands\bin\Debug\netcoreapp3.1\SurveyApp.Data.pdb
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Commands\bin\Debug\netcoreapp3.1\SurveyApp.Models.pdb
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Commands\obj\Debug\netcoreapp3.1\SurveyApp.Commands.csprojAssemblyReference.cache
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Commands\obj\Debug\netcoreapp3.1\SurveyApp.Commands.AssemblyInfoInputs.cache
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Commands\obj\Debug\netcoreapp3.1\SurveyApp.Commands.AssemblyInfo.cs
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Commands\obj\Debug\netcoreapp3.1\SurveyApp.Commands.csproj.CopyComplete
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Commands\obj\Debug\netcoreapp3.1\SurveyApp.Commands.dll
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Commands\obj\Debug\netcoreapp3.1\SurveyApp.Commands.pdb

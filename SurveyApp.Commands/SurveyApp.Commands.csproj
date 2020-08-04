@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SurveyApp.Application\SurveyApp.Application.csproj" />
+    <ProjectReference Include="..\SurveyApp.Data\SurveyApp.Data.csproj" />
+  </ItemGroup>
+
 </Project>
