@@ -7,6 +7,6 @@ namespace SurveyApp.Application.Commands
 {
     public interface IResponseSurveyCommand
     {
-        void Execute(SurveyResponseViewModel surveyResponseViewModel);
+        void Execute(int id,SurveyResponseViewModel surveyResponseViewModel);
     }
 }

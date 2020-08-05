@@ -25,7 +25,7 @@ namespace SurveyApp.Commands
             {
                 Title=surveyViewModel.Title,
                 IsOpen=false,
-                CreateDateTime=_dateTime.Today,
+                DefineDateTime=_dateTime.Today,
                 CoordinatorId=surveyViewModel.CoordinatorId
             };
 

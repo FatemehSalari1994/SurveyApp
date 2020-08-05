@@ -2,25 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SurveyApp.Queries.ViewModels
+namespace SurveyApp.Queries.Dtos
 {
     public class SurveyDto
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        public IList<QuestionDto> Questions { get; set; }
-
-    }
-
-    public class QuestionDto
-    {
-        public string Title { get; set; }
-        public IList<QuestionSelectionDto> Selections { get; set; }
-    }
-
-    public class QuestionSelectionDto
-    {
-        public int Id { get; set; }
-        public string Title { get; set; }
+        public int QuestionCount { get; set; }
+        public int ResponseCount { get; set; }
+        public DateTime DefineDateTime { get; set; }
     }
 }

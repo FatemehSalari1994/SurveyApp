@@ -18,10 +18,10 @@ namespace SurveyApp.Queries.Queries
             _unitOfWork = unitOfWork;
         }
 
-        public SurveyDto Execute(int id)
+        public SurveyWithQuestionsDto Execute(int id)
         {
             var query = _unitOfWork.Surveys.Find(id);
-            return  new SurveyDto
+            return  new SurveyWithQuestionsDto
                     {
                         Title = query.Title,
                         Id = query.Id,

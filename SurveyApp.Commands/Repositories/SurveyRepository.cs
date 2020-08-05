@@ -19,5 +19,14 @@ namespace SurveyApp.Commands.Repositories
             _unitOfWork.Surveys.Add(survey);
             _unitOfWork.SaveChanges();
         }
+
+        public Survey FindById(int id)
+            => _unitOfWork.Surveys.Find(id);
+
+        public void Update(Survey survey)
+        {
+            _unitOfWork.Surveys.Update(survey);
+            _unitOfWork.SaveChanges();
+        }
     }
 }

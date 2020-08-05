@@ -16,11 +16,17 @@ namespace SurveyApp.API.Controllers
     {
         IDefineSurveyCommand _defineSurveyCommand;
         IAddQuestionToSurveyCommand _addQuestionToSurveyCommand;
+        IOpenSurveyCommand _openSurveyCommand;
+        ICloseSurveyCommand _closeSurveyCommand;
         public SurveyCommandsController(IDefineSurveyCommand defineSurveyCommand,
-                                        IAddQuestionToSurveyCommand addQuestionToSurveyCommand)
+                                        IAddQuestionToSurveyCommand addQuestionToSurveyCommand,
+                                        IOpenSurveyCommand openSurveyCommand,
+                                        ICloseSurveyCommand closeSurveyCommand)
         {
             _defineSurveyCommand = defineSurveyCommand;
             _addQuestionToSurveyCommand = addQuestionToSurveyCommand;
+            _openSurveyCommand = openSurveyCommand;
+            _closeSurveyCommand = closeSurveyCommand;
         }
 
         [HttpPost]
@@ -37,8 +43,21 @@ namespace SurveyApp.API.Controllers
                 _addQuestionToSurveyCommand.Execute(id, questionDto);
             });
 
-        //open survey
-        //close survey
-            
+        
+        [HttpPost("{id}/open")]
+        public async Task Open([FromRoute]int id)
+            => await Task.Run(() =>
+            {
+                _openSurveyCommand.Execute(id);
+            });
+
+       
+        [HttpPost("{id}/close")]
+        public async Task Close([FromRoute]int id)
+            => await Task.Run(() =>
+            {
+                _closeSurveyCommand.Execute(id);
+            });
+
     }
 }

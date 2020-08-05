@@ -18,5 +18,9 @@ namespace SurveyApp.Models
         public string RespondentId { get; set; }
         public DateTime ResponseDateTime { get; set; }        
         public virtual ICollection<QuestionResponse> QuestionResponses { get; set; }
+
+        public int SurveyId { get; set; }
+        [ForeignKey("SurveyId")]
+        public virtual Survey Survey { get; set; }
     }
 }

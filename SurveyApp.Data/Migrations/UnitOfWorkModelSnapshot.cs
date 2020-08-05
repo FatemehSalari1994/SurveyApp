@@ -242,6 +242,9 @@ namespace SurveyApp.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("QuestionId")
+                        .HasColumnType("int");
+
                     b.Property<int>("QuestionSelectionId")
                         .HasColumnType("int");
 
@@ -249,6 +252,8 @@ namespace SurveyApp.Data.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("QuestionId");
 
                     b.HasIndex("QuestionSelectionId");
 
@@ -287,7 +292,7 @@ namespace SurveyApp.Data.Migrations
                     b.Property<string>("CoordinatorId")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("CreateDateTime")
+                    b.Property<DateTime>("DefineDateTime")
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("IsOpen")
@@ -314,7 +319,12 @@ namespace SurveyApp.Data.Migrations
                     b.Property<DateTime>("ResponseDateTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("SurveyId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("SurveyId");
 
                     b.ToTable("SurveyResponses");
                 });
@@ -375,22 +385,28 @@ namespace SurveyApp.Data.Migrations
                     b.HasOne("SurveyApp.Models.Survey", "Survey")
                         .WithMany("Questions")
                         .HasForeignKey("SurveyId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 
             modelBuilder.Entity("SurveyApp.Models.QuestionResponse", b =>
                 {
+                    b.HasOne("SurveyApp.Models.Question", "Question")
+                        .WithMany("QuestionResponses")
+                        .HasForeignKey("QuestionId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("SurveyApp.Models.QuestionSelection", "QuestionSelection")
-                        .WithMany()
+                        .WithMany("QuestionResponses")
                         .HasForeignKey("QuestionSelectionId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("SurveyApp.Models.SurveyResponse", "SurveyResponse")
                         .WithMany("QuestionResponses")
                         .HasForeignKey("SurveyResponseId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 
@@ -399,7 +415,16 @@ namespace SurveyApp.Data.Migrations
                     b.HasOne("SurveyApp.Models.Question", "Question")
                         .WithMany("QuestionSelections")
                         .HasForeignKey("QuestionId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("SurveyApp.Models.SurveyResponse", b =>
+                {
+                    b.HasOne("SurveyApp.Models.Survey", "Survey")
+                        .WithMany("SurveyResponses")
+                        .HasForeignKey("SurveyId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 #pragma warning restore 612, 618

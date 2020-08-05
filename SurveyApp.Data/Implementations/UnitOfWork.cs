@@ -9,6 +9,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore.Proxies;
+using System.Data.Entity.ModelConfiguration.Conventions;
+using System.Linq;
 
 namespace SurveyApp.Data.Implementations
 {
@@ -105,6 +107,7 @@ namespace SurveyApp.Data.Implementations
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseLazyLoadingProxies();
+            
         }
         public override ChangeTracker ChangeTracker
         {
@@ -131,7 +134,15 @@ namespace SurveyApp.Data.Implementations
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            var cascadeFKs = modelBuilder.Model.GetEntityTypes()
+           .SelectMany(t => t.GetForeignKeys())
+           .Where(fk => !fk.IsOwnership && fk.DeleteBehavior == DeleteBehavior.Cascade);
+
+            foreach (var fk in cascadeFKs)
+                fk.DeleteBehavior = DeleteBehavior.Restrict;
+
             base.OnModelCreating(modelBuilder);
+
         }
 
         public static ReadDbContext Create(DbContextOptions<ReadDbContext> options) => Create(options, null);

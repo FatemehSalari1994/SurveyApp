@@ -7,6 +7,6 @@ namespace SurveyApp.Queries.Contracts
 {
     public interface IGetSurveyByIdQuery
     {
-        SurveyDto Execute(int id);
+        SurveyWithQuestionsDto Execute(int id);
     }
 }

@@ -47,20 +47,6 @@ namespace SurveyApp.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "SurveyResponses",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    RespondentId = table.Column<string>(nullable: true),
-                    ResponseDateTime = table.Column<DateTime>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_SurveyResponses", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Surveys",
                 columns: table => new
                 {
@@ -199,7 +185,28 @@ namespace SurveyApp.Data.Migrations
                         column: x => x.SurveyId,
                         principalTable: "Surveys",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "SurveyResponses",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    RespondentId = table.Column<string>(nullable: true),
+                    ResponseDateTime = table.Column<DateTime>(nullable: false),
+                    SurveyId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SurveyResponses", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_SurveyResponses_Surveys_SurveyId",
+                        column: x => x.SurveyId,
+                        principalTable: "Surveys",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -219,7 +226,7 @@ namespace SurveyApp.Data.Migrations
                         column: x => x.QuestionId,
                         principalTable: "Questions",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -229,23 +236,30 @@ namespace SurveyApp.Data.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     SurveyResponseId = table.Column<int>(nullable: false),
-                    QuestionSelectionId = table.Column<int>(nullable: false)
+                    QuestionSelectionId = table.Column<int>(nullable: false),
+                    QuestionId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_QuestionResponses", x => x.Id);
                     table.ForeignKey(
+                        name: "FK_QuestionResponses_Questions_QuestionId",
+                        column: x => x.QuestionId,
+                        principalTable: "Questions",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
                         name: "FK_QuestionResponses_QuestionSelections_QuestionSelectionId",
                         column: x => x.QuestionSelectionId,
                         principalTable: "QuestionSelections",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_QuestionResponses_SurveyResponses_SurveyResponseId",
                         column: x => x.SurveyResponseId,
                         principalTable: "SurveyResponses",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -288,6 +302,11 @@ namespace SurveyApp.Data.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_QuestionResponses_QuestionId",
+                table: "QuestionResponses",
+                column: "QuestionId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_QuestionResponses_QuestionSelectionId",
                 table: "QuestionResponses",
                 column: "QuestionSelectionId");
@@ -306,6 +325,11 @@ namespace SurveyApp.Data.Migrations
                 name: "IX_QuestionSelections_QuestionId",
                 table: "QuestionSelections",
                 column: "QuestionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_SurveyResponses_SurveyId",
+                table: "SurveyResponses",
+                column: "SurveyId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
