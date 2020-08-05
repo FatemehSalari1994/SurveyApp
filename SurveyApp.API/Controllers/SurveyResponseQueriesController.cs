@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SurveyApp.Queries.Contracts;
 using SurveyApp.Queries.Dtos;
 
 namespace SurveyApp.API.Controllers
@@ -13,18 +14,14 @@ namespace SurveyApp.API.Controllers
     public class SurveyResponseQueriesController : ControllerBase
     {
         IGetSurveyResponseQuery _getSurveyResponseQuery;
-        public SurveyResponseQueriesController( getSurveyResponseQuery)
+        public SurveyResponseQueriesController(IGetSurveyResponseQuery getSurveyResponseQuery)
         {
             _getSurveyResponseQuery = getSurveyResponseQuery;
         }
 
         [HttpGet("{id}")]
         public async Task<SurveyResponseDto> Get([FromRoute] int id)
-        
-            => await Task.Run(() =>
-               {
-                   _getSurveyResponseQuery.Execute(id, surveyResponseViewModel);
-               });
-        
+             => await Task.Run(() => _getSurveyResponseQuery.Execute(id));   
+
     }
 }

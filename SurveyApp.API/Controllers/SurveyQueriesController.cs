@@ -17,24 +17,22 @@ namespace SurveyApp.API.Controllers
         IGetSurveyByIdQuery _getSurveyByIdQuery;
         IGetOpenSurveysQuery _getOpenSurveysQuery;
         IGetCloseSurveysQuery _getCloseSurveysQuery;
+        IGetSurveyResponseReportQuery _getSurveyResponseReportQuery;
         public SurveyQueriesController(IGetSurveyByIdQuery getSurveyByIdQuery,
                                        IGetOpenSurveysQuery getOpenSurveysQuery,
-                                       IGetCloseSurveysQuery getCloseSurveysQuery)
+                                       IGetCloseSurveysQuery getCloseSurveysQuery,
+                                       IGetSurveyResponseReportQuery getSurveyResponseReportQuery)
         {
             _getSurveyByIdQuery = getSurveyByIdQuery;
             _getOpenSurveysQuery = getOpenSurveysQuery;
             _getCloseSurveysQuery = getCloseSurveysQuery;
+            _getSurveyResponseReportQuery = getSurveyResponseReportQuery;
         }
 
         [HttpGet("{id}")]
         public async Task<SurveyWithQuestionsDto> GetById([FromRoute]int id)
             => await Task.Run(() => _getSurveyByIdQuery.Execute(id));
 
-        [HttpGet("{id}")]
-        public async Task<SurveyWithQuestionsDto> GetById([FromRoute]int id)
-          => await Task.Run(() => _getSurveyByIdQuery.Execute(id));
-
-        //get open survey
         [HttpGet("open")]
         public async Task<IList<SurveyDto>> GetOpenSurveys()
              => await Task.Run(() => _getOpenSurveysQuery.Execute());
@@ -42,5 +40,9 @@ namespace SurveyApp.API.Controllers
         [HttpGet("close")]
         public async Task<IList<SurveyDto>> GetCloseSurveys()
            => await Task.Run(() => _getCloseSurveysQuery.Execute());
+
+        [HttpGet("{id}/report")]
+        public async Task<SurveyReportDto> Report([FromRoute] int id)
+         => await Task.Run(() => _getSurveyResponseReportQuery.Execute(id));
     }
 }

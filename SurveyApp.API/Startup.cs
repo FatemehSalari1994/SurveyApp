@@ -68,7 +68,10 @@ namespace SurveyApp.API
             services.AddTransient<IGetSurveyByIdQuery, GetSurveyByIdQuery>();
             services.AddTransient<IGetOpenSurveysQuery, GetOpenSurveysQuery>();
             services.AddTransient<IGetCloseSurveysQuery, GetCloseSurveysQuery>();
+            services.AddTransient<IGetSurveyResponseReportQuery, GetSurveyResponseReportQuery>();
             
+
+
             services.AddControllers();
         }
 
