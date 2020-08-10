@@ -1,4 +1,5 @@
-﻿using SurveyApp.Data.Implementations;
+﻿using SurveyApp.Data.Contracts;
+using SurveyApp.Data.Implementations;
 using SurveyApp.Queries.Contracts;
 using SurveyApp.Queries.Dtos;
 using System;
@@ -10,14 +11,14 @@ namespace SurveyApp.Queries.Queries
 {
     public class GetSurveyResponseQuery : IGetSurveyResponseQuery
     {
-        IUnitOfWork _unitOfWork;
-        public GetSurveyResponseQuery(IUnitOfWork unitOfWork)
+        ISurveyDbContext _surveyDbContext;
+        public GetSurveyResponseQuery(ISurveyDbContext surveyDbContext)
         {
-            _unitOfWork = unitOfWork;
+            _surveyDbContext = surveyDbContext;
         }
         public SurveyResponseDto Execute(int id)
         {
-            var surveyResponse = _unitOfWork.SurveyResponses.Find(id);
+            var surveyResponse = _surveyDbContext.SurveyResponses.Find(id);
             return new SurveyResponseDto
             {
                 RespondentId=surveyResponse.RespondentId,

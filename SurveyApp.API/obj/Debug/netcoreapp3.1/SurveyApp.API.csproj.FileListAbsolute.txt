@@ -1,3 +1,7 @@
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\obj\Debug\netcoreapp3.1\SurveyApp.API.csprojAssemblyReference.cache
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\obj\Debug\netcoreapp3.1\SurveyApp.API.MvcApplicationPartsAssemblyInfo.cache
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\obj\Debug\netcoreapp3.1\SurveyApp.API.AssemblyInfoInputs.cache
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\obj\Debug\netcoreapp3.1\SurveyApp.API.AssemblyInfo.cs
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\appsettings.json
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -7,6 +11,7 @@ D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\Surv
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\SurveyApp.API.runtimeconfig.dev.json
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\SurveyApp.API.dll
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\SurveyApp.API.pdb
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\Castle.Core.dll
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\EntityFramework.dll
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
@@ -24,6 +29,7 @@ D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\Micr
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
@@ -134,15 +140,9 @@ D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\Surv
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\SurveyApp.Data.pdb
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\SurveyApp.Queries.pdb
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\SurveyApp.Models.pdb
-D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\obj\Debug\netcoreapp3.1\SurveyApp.API.csprojAssemblyReference.cache
-D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\obj\Debug\netcoreapp3.1\SurveyApp.API.MvcApplicationPartsAssemblyInfo.cache
-D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\obj\Debug\netcoreapp3.1\SurveyApp.API.AssemblyInfoInputs.cache
-D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\obj\Debug\netcoreapp3.1\SurveyApp.API.AssemblyInfo.cs
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\obj\Debug\netcoreapp3.1\SurveyApp.API.RazorTargetAssemblyInfo.cache
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\obj\Debug\netcoreapp3.1\SurveyApp.API.csproj.CopyComplete
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\obj\Debug\netcoreapp3.1\staticwebassets\SurveyApp.API.StaticWebAssets.Manifest.cache
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\obj\Debug\netcoreapp3.1\staticwebassets\SurveyApp.API.StaticWebAssets.xml
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\obj\Debug\netcoreapp3.1\SurveyApp.API.dll
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\obj\Debug\netcoreapp3.1\SurveyApp.API.pdb
-D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\Castle.Core.dll
-D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll

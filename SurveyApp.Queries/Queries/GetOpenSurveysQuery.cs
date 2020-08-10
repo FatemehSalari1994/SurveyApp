@@ -1,4 +1,5 @@
-﻿using SurveyApp.Data.Implementations;
+﻿using SurveyApp.Data.Contracts;
+using SurveyApp.Data.Implementations;
 using SurveyApp.Queries.Contracts;
 using SurveyApp.Queries.Dtos;
 using System;
@@ -10,13 +11,13 @@ namespace SurveyApp.Queries.Queries
 {
     public class GetOpenSurveysQuery : IGetOpenSurveysQuery
     {
-        IUnitOfWork _unitOfWork;
-        public GetOpenSurveysQuery(IUnitOfWork unitOfWork)
+        ISurveyDbContext _surveyDbContext;
+        public GetOpenSurveysQuery(ISurveyDbContext surveyDbContext)
         {
-            _unitOfWork = unitOfWork;
+            _surveyDbContext = surveyDbContext;
         }
         public IList<SurveyDto> Execute()
-            =>_unitOfWork.Surveys.Where(s => s.IsOpen == true)
+            => _surveyDbContext.Surveys.Where(s => s.IsOpen == true)
                                  .Select(_ => new SurveyDto
                                   {
                                      Id=_.Id,

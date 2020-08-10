@@ -8,8 +8,8 @@ using SurveyApp.Data.Implementations;
 
 namespace SurveyApp.Data.Migrations
 {
-    [DbContext(typeof(UnitOfWork))]
-    partial class UnitOfWorkModelSnapshot : ModelSnapshot
+    [DbContext(typeof(SurveyAppDbContext))]
+    partial class SurveyAppDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

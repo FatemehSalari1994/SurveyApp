@@ -21,6 +21,7 @@ using SurveyApp.Commands;
 using SurveyApp.Commands.Repositories;
 using SurveyApp.Commands.Services;
 using SurveyApp.Data;
+using SurveyApp.Data.Contracts;
 using SurveyApp.Data.Implementations;
 using SurveyApp.Queries.Contracts;
 using SurveyApp.Queries.Queries;
@@ -41,21 +42,9 @@ namespace SurveyApp.API
      
         public void ConfigureServices(IServiceCollection services)
         {
-
-            #region origin 
-            //services.AddScoped<IUnitOfWork>(_ => UnitOfWork.Create(GetDbContextOptions<UnitOfWork>()));
-
-            ////services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<UnitOfWork>();
-
-            //services.AddSingleton<IDateTimeService, DateTimeService>();
-            //services.AddTransient<ISurveyRepository, SurveyRepository>();
-            //services.AddTransient<ISurveyCreateCommand, SurveyCreateCommand>();
-            #endregion
-
-
-            services.AddScoped<IUnitOfWork>(_ => UnitOfWork.Create(GetDbContextOptions<UnitOfWork>()));
-            services.AddScoped<IReadDbContext>(_ => ReadDbContext.Create(GetDbContextOptions<ReadDbContext>()));
-            //services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<UnitOfWork>();
+            services.AddDbContext<SurveyAppDbContext>(x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<ISurveyDbContext, SurveyAppDbContext>();
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<SurveyAppDbContext>();
             services.AddSingleton<IDateTimeService, DateTimeService>();
             services.AddTransient<ISurveyRepository, SurveyRepository>();
             services.AddTransient<IDefineSurveyCommand, DefineSurveyCommand>();
@@ -69,28 +58,10 @@ namespace SurveyApp.API
             services.AddTransient<IGetOpenSurveysQuery, GetOpenSurveysQuery>();
             services.AddTransient<IGetCloseSurveysQuery, GetCloseSurveysQuery>();
             services.AddTransient<IGetSurveyResponseReportQuery, GetSurveyResponseReportQuery>();
-            
-
-
+           
             services.AddControllers();
         }
-
-
-
-        static DbContextOptions<T> GetDbContextOptions<T>() where T : IdentityDbContext
-        {
-            return new DbContextOptionsBuilder<T>().UseSqlServer(
-                     "server=localhost;database=SurveyApp;integrated security=true",
-                    b => b.MigrationsHistoryTable("SurveyApp_Migrations")
-                        .MigrationsAssembly(typeof(UnitOfWork).Assembly.FullName))
-                .Options;
-        }
-
-        class DataContextDesignTimeFactory : IDesignTimeDbContextFactory<UnitOfWork>
-        {
-            public UnitOfWork CreateDbContext(string[] _) => UnitOfWork.Create(GetDbContextOptions<UnitOfWork>());
-        }
-
+        
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
 
@@ -111,7 +82,7 @@ namespace SurveyApp.API
             {
                 endpoints.MapControllers();
             });
-          //  SampleData.Initialize(app.ApplicationServices);
+            SampleData.Initialize(app.ApplicationServices);
         }
     }
 }

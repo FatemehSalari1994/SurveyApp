@@ -9,9 +9,9 @@ using SurveyApp.Data.Implementations;
 
 namespace SurveyApp.Data.Migrations
 {
-    [DbContext(typeof(UnitOfWork))]
-    [Migration("20200804113830_CreateTables")]
-    partial class CreateTables
+    [DbContext(typeof(SurveyAppDbContext))]
+    [Migration("20200807174924_CreateTable")]
+    partial class CreateTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -294,7 +294,7 @@ namespace SurveyApp.Data.Migrations
                     b.Property<string>("CoordinatorId")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("CreateDateTime")
+                    b.Property<DateTime>("DefineDateTime")
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("IsOpen")

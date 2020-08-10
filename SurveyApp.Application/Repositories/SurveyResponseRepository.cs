@@ -1,4 +1,5 @@
-﻿using SurveyApp.Data.Implementations;
+﻿using SurveyApp.Data.Contracts;
+using SurveyApp.Data.Implementations;
 using SurveyApp.Models;
 using System;
 using System.Collections.Generic;
@@ -8,15 +9,15 @@ namespace SurveyApp.Application.Repositories
 {
     public class SurveyResponseRepository : ISurveyResponseRepository
     {
-        IUnitOfWork _unitOfWork;
-        public SurveyResponseRepository(IUnitOfWork unitOfWork)
+        ISurveyDbContext _surveyDbContext;
+        public SurveyResponseRepository(ISurveyDbContext surveyDbContext)
         {
-            _unitOfWork = unitOfWork;
+            _surveyDbContext = surveyDbContext;
         }
         public void Add(SurveyResponse surveyResponse)
         {
-            _unitOfWork.SurveyResponses.Add(surveyResponse);
-            _unitOfWork.SaveChanges();
+            _surveyDbContext.SurveyResponses.Add(surveyResponse);
+            _surveyDbContext.SaveChanges();
         }
     }
 }

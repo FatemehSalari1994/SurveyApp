@@ -1,4 +1,5 @@
 ﻿using SurveyApp.Application.Repositories;
+using SurveyApp.Data.Contracts;
 using SurveyApp.Data.Implementations;
 using SurveyApp.Models;
 using System;
@@ -9,15 +10,15 @@ namespace SurveyApp.Commands.Repositories
 {
     public class QuestionRepository : IQuestionRepository
     {
-        IUnitOfWork _unitOfWork;
-        public QuestionRepository(IUnitOfWork unitOfWork)
+        ISurveyDbContext _surveyDbContext;
+        public QuestionRepository(ISurveyDbContext surveyDbContext)
         {
-            _unitOfWork = unitOfWork;
+            _surveyDbContext = surveyDbContext;
         }
         public void Add(Question question)
         {
-            _unitOfWork.Questions.Add(question);
-            _unitOfWork.SaveChanges();
+            _surveyDbContext.Questions.Add(question);
+            _surveyDbContext.SaveChanges();
         }
     }
 }

@@ -16,6 +16,7 @@ namespace SurveyApp.Commands
         ISurveyResponseRepository _surveyResponseRepository;
         ISurveyRepository _surveyRepository;
         IDateTimeService _dateTimeService;
+
         public ResponseSurveyCommand(ISurveyResponseRepository surveyResponseRepository,
                                      ISurveyRepository surveyRepository,
                                      IDateTimeService dateTimeService)
@@ -24,11 +25,15 @@ namespace SurveyApp.Commands
             _dateTimeService = dateTimeService;
             _surveyRepository = surveyRepository;
         }
+
         public void Execute(int id,SurveyResponseViewModel surveyResponseViewModel)
         {
             var survey = _surveyRepository.FindById(id);
             if (survey == null)
                 throw new SurveyNotFoundException();
+
+            if (!survey.IsOpen)
+                throw new ResponseCloseSurveyException();
 
             var hasQuestionWithoutResponse = !survey.Questions.Select(x => x.Id)
                                     .All(surveyResponseViewModel.QuestionsResponses.Select(y => y.QuestionId).Contains);

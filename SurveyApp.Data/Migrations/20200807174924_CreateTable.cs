@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SurveyApp.Data.Migrations
 {
-    public partial class CreateTables : Migration
+    public partial class CreateTable : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -53,7 +53,7 @@ namespace SurveyApp.Data.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CoordinatorId = table.Column<string>(nullable: true),
-                    CreateDateTime = table.Column<DateTime>(nullable: false),
+                    DefineDateTime = table.Column<DateTime>(nullable: false),
                     Title = table.Column<string>(nullable: true),
                     IsOpen = table.Column<bool>(nullable: false)
                 },
