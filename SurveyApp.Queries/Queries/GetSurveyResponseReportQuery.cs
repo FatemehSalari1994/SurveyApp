@@ -19,6 +19,11 @@ namespace SurveyApp.Queries.Queries
         public SurveyReportDto Execute(int id)
         {
             var survey = _surveyDbContext.Surveys.Find(id);
+            var k = survey.Questions.Select(_ => new QuestionResponseReport
+            {
+                QuestionTitle = _.Title,
+                Responses = _.QuestionSelections.ToDictionary(x => x.Title, x => x.QuestionResponses.Count())
+            });
             return new SurveyReportDto
             {
                 Title=survey.Title,

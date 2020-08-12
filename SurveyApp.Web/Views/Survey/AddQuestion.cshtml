@@ -1,0 +1,58 @@
+﻿@model SurveyApp.Application.Commands.ViewModels.QuestionViewModel
+
+@{
+    ViewData["Title"] = "AddQuestion";
+}
+
+<h1>AddQuestion</h1>
+
+<h4>QuestionViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddQuestion">
+            @Html.HiddenFor(p => p.SelectionsTitles)
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="col-md-8">
+                    <label  class="control-label"></label>
+                    <input class="form-control" />
+                    <span  class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-success" type="button" id="add-button"> + </button>
+                </div>
+            
+            </div>
+
+            <table class="table" id="SelectionsTable">
+                <thead>
+                    <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+@section BottomScripts{ 
+    <script src="~/js/Survey/AddQuestion.js"></script>
+}
+

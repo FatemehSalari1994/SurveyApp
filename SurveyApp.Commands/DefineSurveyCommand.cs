@@ -1,5 +1,5 @@
 ﻿using SurveyApp.Application.Commands;
-using SurveyApp.Application.Commands.Dtos;
+using SurveyApp.Application.Commands.ViewModels;
 using SurveyApp.Application.Repositories;
 using SurveyApp.Application.Services;
 using SurveyApp.Models;

@@ -1,0 +1,428 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Web\\SurveyApp.Web.csproj": {}
+  },
+  "projects": {
+    "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Application\\SurveyApp.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Application\\SurveyApp.Application.csproj",
+        "projectName": "SurveyApp.Application",
+        "projectPath": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Application\\SurveyApp.Application.csproj",
+        "packagesPath": "C:\\Users\\Fatemeh\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Fatemeh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Data\\SurveyApp.Data.csproj": {
+                "projectPath": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Data\\SurveyApp.Data.csproj"
+              },
+              "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Models\\SurveyApp.Models.csproj": {
+                "projectPath": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Models\\SurveyApp.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Commands\\SurveyApp.Commands.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Commands\\SurveyApp.Commands.csproj",
+        "projectName": "SurveyApp.Commands",
+        "projectPath": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Commands\\SurveyApp.Commands.csproj",
+        "packagesPath": "C:\\Users\\Fatemeh\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Commands\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Fatemeh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Application\\SurveyApp.Application.csproj": {
+                "projectPath": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Application\\SurveyApp.Application.csproj"
+              },
+              "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Data\\SurveyApp.Data.csproj": {
+                "projectPath": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Data\\SurveyApp.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Data\\SurveyApp.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Data\\SurveyApp.Data.csproj",
+        "projectName": "SurveyApp.Data",
+        "projectPath": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Data\\SurveyApp.Data.csproj",
+        "packagesPath": "C:\\Users\\Fatemeh\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Fatemeh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Models\\SurveyApp.Models.csproj": {
+                "projectPath": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Models\\SurveyApp.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Models\\SurveyApp.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Models\\SurveyApp.Models.csproj",
+        "projectName": "SurveyApp.Models",
+        "projectPath": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Models\\SurveyApp.Models.csproj",
+        "packagesPath": "C:\\Users\\Fatemeh\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Fatemeh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Queries\\SurveyApp.Queries.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Queries\\SurveyApp.Queries.csproj",
+        "projectName": "SurveyApp.Queries",
+        "projectPath": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Queries\\SurveyApp.Queries.csproj",
+        "packagesPath": "C:\\Users\\Fatemeh\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Queries\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Fatemeh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Data\\SurveyApp.Data.csproj": {
+                "projectPath": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Data\\SurveyApp.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Web\\SurveyApp.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Web\\SurveyApp.Web.csproj",
+        "projectName": "SurveyApp.Web",
+        "projectPath": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Web\\SurveyApp.Web.csproj",
+        "packagesPath": "C:\\Users\\Fatemeh\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Fatemeh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Application\\SurveyApp.Application.csproj": {
+                "projectPath": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Application\\SurveyApp.Application.csproj"
+              },
+              "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Commands\\SurveyApp.Commands.csproj": {
+                "projectPath": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Commands\\SurveyApp.Commands.csproj"
+              },
+              "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Data\\SurveyApp.Data.csproj": {
+                "projectPath": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Data\\SurveyApp.Data.csproj"
+              },
+              "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Queries\\SurveyApp.Queries.csproj": {
+                "projectPath": "D:\\Projects\\Excerises\\Dotin\\SurveyApp\\SurveyApp.Queries\\SurveyApp.Queries.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SurveyApp.Application.Commands.Dtos
+namespace SurveyApp.Application.Commands.ViewModels
 {
     public class SurveyViewModel
     {

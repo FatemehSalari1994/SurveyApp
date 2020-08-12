@@ -40,8 +40,8 @@ namespace SurveyApp.Commands
             if (hasQuestionWithoutResponse)
                 throw new QuestionWithoutResponseExeption();
 
-            if (survey.SurveyResponses.Any(x => x.RespondentId == surveyResponseViewModel.RespondentId))
-                throw new SameRespondentException();
+            //if (survey.SurveyResponses.Any(x => x.RespondentId == surveyResponseViewModel.RespondentId))
+            //    throw new SameRespondentException();
 
             var surveyResponse = new SurveyResponse
             {

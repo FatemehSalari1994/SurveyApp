@@ -146,3 +146,5 @@ D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\obj\Debug\netcoreapp3.1\stat
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\obj\Debug\netcoreapp3.1\staticwebassets\SurveyApp.API.StaticWebAssets.xml
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\obj\Debug\netcoreapp3.1\SurveyApp.API.dll
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\obj\Debug\netcoreapp3.1\SurveyApp.API.pdb
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\obj\Debug\netcoreapp3.1\SurveyApp.API.csproj.CoreCompileInputs.cache
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.API\obj\Debug\netcoreapp3.1\SurveyApp.API.genruntimeconfig.cache

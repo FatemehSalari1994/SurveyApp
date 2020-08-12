@@ -11,3 +11,5 @@ D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Data\obj\Debug\netcoreapp3.1\Sur
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Data\obj\Debug\netcoreapp3.1\SurveyApp.Data.csproj.CopyComplete
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Data\obj\Debug\netcoreapp3.1\SurveyApp.Data.dll
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Data\obj\Debug\netcoreapp3.1\SurveyApp.Data.pdb
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Data\obj\Debug\netcoreapp3.1\SurveyApp.Data.csproj.CoreCompileInputs.cache
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Data\obj\Debug\netcoreapp3.1\SurveyApp.Data.genruntimeconfig.cache

@@ -6,3 +6,4 @@ D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Models\obj\Debug\netcoreapp3.1\S
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Models\obj\Debug\netcoreapp3.1\SurveyApp.Models.AssemblyInfo.cs
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Models\obj\Debug\netcoreapp3.1\SurveyApp.Models.dll
 D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Models\obj\Debug\netcoreapp3.1\SurveyApp.Models.pdb
+D:\Projects\Excerises\Dotin\SurveyApp\SurveyApp.Models\obj\Debug\netcoreapp3.1\SurveyApp.Models.csproj.CoreCompileInputs.cache

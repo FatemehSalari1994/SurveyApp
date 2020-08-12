@@ -1,0 +1,74 @@
+﻿@model SurveyApp.Queries.Dtos.SurveyReportDto
+
+@{
+    ViewData["Title"] = "Report";
+}
+
+<h1>Report</h1>
+
+<div>
+    <h4>SurveyReportDto</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CoordinatorId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CoordinatorId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DefineDateTime)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DefineDateTime)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IsOpen)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IsOpen)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ResponseCount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ResponseCount)
+        </dd>
+    </dl>
+
+    <h4>Questions</h4>
+    <hr />
+    <ul class="list-group">
+        @foreach (var question in Model.QuestionResponseReports)
+        {
+
+            <li class="list-group-item">  @Html.DisplayFor(model => question.QuestionTitle)</li>
+            <li class="list-group-item">
+                <table class="table">
+                    <thead>
+                        <tr>
+                           <th>title</th>
+                            <th>response count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var selection in question.Responses)
+                        {
+                        <tr>
+                            <td>@selection.Key</td>
+                            <td>@selection.Value</td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </li>
+        }
+    </ul>
+</div>
+

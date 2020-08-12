@@ -1,0 +1,61 @@
+﻿@model IEnumerable<SurveyApp.Queries.Dtos.SurveyDto>
+
+@{
+    ViewData["Title"] = "OpenSurveys";
+}
+
+<h1>OpenSurveys</h1>
+
+<p>
+    <a asp-action="Define">Define New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuestionCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResponseCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DefineDateTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuestionCount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ResponseCount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DefineDateTime)
+                </td>
+                <td>
+                    @Html.ActionLink("AddQuestion", "AddQuestion", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "ShowDetails", new { id = item.Id }) |
+                    @Html.ActionLink("Open", "Open", new { id = item.Id })|
+                    @Html.ActionLink("Report", "Report", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

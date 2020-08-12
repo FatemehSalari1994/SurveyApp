@@ -1,0 +1,47 @@
+﻿@model SurveyApp.Queries.ViewModels.SurveyWithQuestionsDto
+
+@{
+    ViewData["Title"] = "ShowDetails";
+}
+
+<h1>ShowDetials</h1>
+
+<div>
+    <h4>Survey</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+    </dl>
+    <h4>Questions</h4>
+    <hr />
+    <ul class="list-group">
+        @foreach (var question in Model.Questions)
+        {
+
+            <li class="list-group-item">  @Html.DisplayFor(model => question.Title)</li>
+            <li class="list-group-item">
+                <ul class="list-group">
+                    @foreach (var selection in question.Selections)
+                    {
+                        <li class="list-group-item">
+                            @Html.DisplayFor(model => selection.Title)
+                           </li>
+                        }
+                </ul>
+            </li>
+        }
+    </ul>
+
+    </div>
+

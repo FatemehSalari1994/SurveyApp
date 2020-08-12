@@ -14,6 +14,7 @@ namespace SurveyApp.Queries.ViewModels
 
     public class QuestionDto
     {
+        public int Id { get; set; }
         public string Title { get; set; }
         public IList<QuestionSelectionDto> Selections { get; set; }
     }

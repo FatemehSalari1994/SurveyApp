@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SurveyApp.Application.Commands;
-using SurveyApp.Application.Commands.Dtos;
 using SurveyApp.Application.Commands.ViewModels;
 
 namespace SurveyApp.API.Controllers

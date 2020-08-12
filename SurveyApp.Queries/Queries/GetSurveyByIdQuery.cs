@@ -27,6 +27,7 @@ namespace SurveyApp.Queries.Queries
                         Id = query.Id,
                         Questions = query.Questions.Select(q => new QuestionDto
                         {
+                            Id=q.Id,
                             Title = q.Title,
                             Selections = q.QuestionSelections.Select(_=> new QuestionSelectionDto
                             {
