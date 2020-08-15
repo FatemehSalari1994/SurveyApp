@@ -1,0 +1,1 @@
+﻿$(".show-date").text(moment().locale('fa').format('YYYY/M/D HH:mm'));

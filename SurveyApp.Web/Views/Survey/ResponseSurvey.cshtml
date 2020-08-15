@@ -4,18 +4,12 @@
     ViewData["Title"] = "ShowDetails";
 }
 
-<h1>ShowDetials</h1>
+<h1>نظر سنجی </h1>
 
 <div>
-    <h4>Survey</h4>
     <hr />
     <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Id)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Id)
-        </dd>
+
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Title)
         </dt>
@@ -23,7 +17,7 @@
             @Html.DisplayFor(model => model.Title)
         </dd>
     </dl>
-    <h4>Questions</h4>
+    <h4>سوالات</h4>
     <hr />
 
 
@@ -31,18 +25,21 @@
     {
         <ul class="list-group">
             @Html.Hidden("surveyResponseViewModel.QuestionsResponses[].QuestionId", question.Id, new { @class = "form-control" })
-            <li class="list-group-item">  @Html.DisplayFor(model => question.Title)</li>
+            <li class="list-group-item question-title">  @Html.DisplayFor(model => question.Title)</li>
             <li class="list-group-item">
                 @Html.DropDownList("surveyResponseViewModel.QuestionsResponses[].ResponseId", question.Selections.Select(_ => new SelectListItem(_.Title, _.Id.ToString())).ToList(), new { @class = "form-control" })
 
             </li>
         </ul>
     }
-
-    <button type="button" class="btn btn-primary send-data">Send</button>
+    <br />
+    <button type="button" class="btn btn-primary send-data">ارسال </button>
 </div>
 
+@section TopScripts{
+    <link href="~/css/Survey/ResponseSurvey.css" rel="stylesheet" />
+}
 @section BottomScripts{
     <script src="~/js/Survey/ResponseSurvey.js"></script>
- }
+}
 

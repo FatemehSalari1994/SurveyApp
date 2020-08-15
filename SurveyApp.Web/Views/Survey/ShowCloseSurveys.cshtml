@@ -4,11 +4,7 @@
     ViewData["Title"] = "OpenSurveys";
 }
 
-<h1>OpenSurveys</h1>
-
-<p>
-    <a asp-action="Define">Define New</a>
-</p>
+<h1>نظر سنجی های بسته</h1>
 <table class="table">
     <thead>
         <tr>
@@ -46,16 +42,20 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.ResponseCount)
                 </td>
-                <td>
+                <td class="show-date">
                     @Html.DisplayFor(modelItem => item.DefineDateTime)
                 </td>
                 <td>
-                    @Html.ActionLink("AddQuestion", "AddQuestion", new { id = item.Id }) |
-                    @Html.ActionLink("Details", "ShowDetails", new { id = item.Id }) |
-                    @Html.ActionLink("Open", "Open", new { id = item.Id })|
-                    @Html.ActionLink("Report", "Report", new { id = item.Id })
+                    @Html.ActionLink("اضافه کردن سوال", "AddQuestion", new { id = item.Id }) |
+                    @Html.ActionLink("جزئیات", "ShowDetails", new { id = item.Id }) |
+                    @Html.ActionLink("باز کردن", "Open", new { id = item.Id })|
+                    @Html.ActionLink("گزارش", "Report", new { id = item.Id })
                 </td>
             </tr>
         }
     </tbody>
 </table>
+@section BottomScripts{
+    <script src="https://unpkg.com/jalali-moment/dist/jalali-moment.browser.js"></script>
+    <script src="~/js/Survey/ShowOpenSurveys.js"></script>
+}

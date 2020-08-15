@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\css\Survey\" />
+    <Folder Include="wwwroot\lib\NewFolder\" />
   </ItemGroup>
 
 
