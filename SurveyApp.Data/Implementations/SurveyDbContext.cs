@@ -11,6 +11,7 @@ using System.Text;
 using Microsoft.EntityFrameworkCore.Proxies;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace SurveyApp.Data.Implementations
 {
@@ -44,6 +45,13 @@ namespace SurveyApp.Data.Implementations
             base.OnModelCreating(modelBuilder);
 
         }
+
+        public async Task<int> SaveChangesAsync()
+
+            => await base.SaveChangesAsync();
+
+
+
         public SurveyAppDbContext(DbContextOptions options) : base(options)
         {
         }

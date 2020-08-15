@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SurveyApp.Queries.Queries
 {
@@ -16,9 +17,9 @@ namespace SurveyApp.Queries.Queries
         {
             _surveyDbContext = surveyDbContext;
         }
-        public SurveyResponseDto Execute(int id)
+        public async Task<SurveyResponseDto> Execute(int id)
         {
-            var surveyResponse = _surveyDbContext.SurveyResponses.Find(id);
+            var surveyResponse =await  _surveyDbContext.SurveyResponses.FindAsync(id);
             return new SurveyResponseDto
             {
                 RespondentId=surveyResponse.RespondentId,

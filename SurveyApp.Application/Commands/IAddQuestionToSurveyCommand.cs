@@ -2,11 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SurveyApp.Application.Commands
 {
     public interface IAddQuestionToSurveyCommand
     {
-        void Execute(int id,QuestionViewModel questionViewModel);
+        Task Execute(int id,QuestionViewModel questionViewModel);
     }
 }

@@ -31,18 +31,18 @@ namespace SurveyApp.API.Controllers
 
         [HttpGet("{id}")]
         public async Task<SurveyWithQuestionsDto> GetById([FromRoute]int id)
-            => await Task.Run(() => _getSurveyByIdQuery.Execute(id));
+            => await  _getSurveyByIdQuery.Execute(id);
 
         [HttpGet("open")]
         public async Task<IList<SurveyDto>> GetOpenSurveys()
-             => await Task.Run(() => _getOpenSurveysQuery.Execute());
+             => await  _getOpenSurveysQuery.Execute();
 
         [HttpGet("close")]
         public async Task<IList<SurveyDto>> GetCloseSurveys()
-           => await Task.Run(() => _getCloseSurveysQuery.Execute());
+           => await _getCloseSurveysQuery.Execute();
 
         [HttpGet("{id}/report")]
         public async Task<SurveyReportDto> Report([FromRoute] int id)
-         => await Task.Run(() => _getSurveyResponseReportQuery.Execute(id));
+         => await _getSurveyResponseReportQuery.Execute(id);
     }
 }

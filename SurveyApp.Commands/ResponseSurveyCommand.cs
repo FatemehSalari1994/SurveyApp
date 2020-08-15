@@ -7,7 +7,9 @@ using SurveyApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SurveyApp.Commands
 {
@@ -26,9 +28,9 @@ namespace SurveyApp.Commands
             _surveyRepository = surveyRepository;
         }
 
-        public void Execute(int id,SurveyResponseViewModel surveyResponseViewModel)
+        public async Task Execute(int id,SurveyResponseViewModel surveyResponseViewModel)
         {
-            var survey = _surveyRepository.FindById(id);
+            var survey = _surveyRepository.FindById(id).Result;
             if (survey == null)
                 throw new SurveyNotFoundException();
 
@@ -54,9 +56,9 @@ namespace SurveyApp.Commands
                     QuestionId=qs.QuestionId
 
                 }).ToList()
-            };
+            };            
 
-            _surveyResponseRepository.Add(surveyResponse);
+            await _surveyResponseRepository.Add(surveyResponse);
         }
     }
 }

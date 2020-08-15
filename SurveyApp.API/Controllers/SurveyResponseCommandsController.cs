@@ -21,10 +21,7 @@ namespace SurveyApp.API.Controllers
         [HttpPost("{id}")]
         public async Task Response([FromRoute] int id,
                                    [FromBody] SurveyResponseViewModel surveyResponseViewModel)
-            => await Task.Run(() =>
-            {
-                _responseSurveyCommand.Execute(id,surveyResponseViewModel);
-            });
+            => await _responseSurveyCommand.Execute(id,surveyResponseViewModel);
 
         
     }

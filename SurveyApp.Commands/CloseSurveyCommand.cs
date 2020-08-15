@@ -4,6 +4,7 @@ using SurveyApp.Commands.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SurveyApp.Commands
 {
@@ -14,15 +15,16 @@ namespace SurveyApp.Commands
         {
             _surveyRepository = surveyRepository;
         }
-        public void Execute(int id)
+        public async Task Execute(int id)
         {
-            var survey = _surveyRepository.FindById(id);
+            var survey = _surveyRepository.FindById(id).Result;
 
             if (survey == null)
                 throw new SurveyNotFoundException();
 
             survey.IsOpen = false;
-            _surveyRepository.Update(survey);
+
+            await _surveyRepository.Update(survey);
         }
     }
 }

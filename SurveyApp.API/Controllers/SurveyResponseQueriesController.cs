@@ -21,7 +21,7 @@ namespace SurveyApp.API.Controllers
 
         [HttpGet("{id}")]
         public async Task<SurveyResponseDto> Get([FromRoute] int id)
-             => await Task.Run(() => _getSurveyResponseQuery.Execute(id));   
+             => await _getSurveyResponseQuery.Execute(id);   
 
     }
 }

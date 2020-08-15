@@ -2,11 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SurveyApp.Queries.Contracts
 {
     public interface IGetSurveyByIdQuery
     {
-        SurveyWithQuestionsDto Execute(int id);
+        Task<SurveyWithQuestionsDto> Execute(int id);
     }
 }

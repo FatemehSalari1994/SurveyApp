@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SurveyApp.Commands
 {
@@ -16,7 +17,7 @@ namespace SurveyApp.Commands
         {
             _questionRepository = questionRepository;
         }
-        public void Execute(int id, QuestionViewModel questionViewModel)
+        public async Task Execute(int id, QuestionViewModel questionViewModel)
         {
             var question = new Question
             {
@@ -29,9 +30,7 @@ namespace SurveyApp.Commands
                                                 })
                                                 .ToList()
             };
-
-            _questionRepository.Add(question);
-
+            await  _questionRepository.Add(question);
         }
     }
 }

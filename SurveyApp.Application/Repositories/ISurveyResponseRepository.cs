@@ -2,11 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SurveyApp.Application.Repositories
 {
     public interface ISurveyResponseRepository
     {
-        void Add(SurveyResponse surveyResponse);
+        Task Add(SurveyResponse surveyResponse);
     }
 }

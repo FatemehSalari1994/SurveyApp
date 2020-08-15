@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using SurveyApp.Models;
 using System;
+using System.Threading.Tasks;
 
 namespace SurveyApp.Data.Contracts
 {
@@ -15,5 +16,7 @@ namespace SurveyApp.Data.Contracts
         DbSet<SurveyResponse> SurveyResponses { get; }
 
         int SaveChanges();
+
+        Task<int> SaveChangesAsync();
     }
 }

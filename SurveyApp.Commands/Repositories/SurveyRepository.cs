@@ -5,6 +5,7 @@ using SurveyApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SurveyApp.Commands.Repositories
 {
@@ -15,19 +16,17 @@ namespace SurveyApp.Commands.Repositories
         {
             _surveyDbContext = surveyDbContext;
         }
-        public void Add(Survey survey)
+        public async Task Add(Survey survey)
         {
-            _surveyDbContext.Surveys.Add(survey);
-            _surveyDbContext.SaveChanges();
+            await _surveyDbContext.Surveys.AddAsync(survey);
+            await _surveyDbContext.SaveChangesAsync();
         }
 
-        public Survey FindById(int id)
-            => _surveyDbContext.Surveys.Find(id);
+        public async Task<Survey> FindById(int id)
+            => await _surveyDbContext.Surveys.FindAsync(id);
 
-        public void Update(Survey survey)
-        {
-            _surveyDbContext.Surveys.Update(survey);
-            _surveyDbContext.SaveChanges();
-        }
+        public async Task Update(Survey survey)
+             => await _surveyDbContext.SaveChangesAsync();
+        
     }
 }

@@ -2,11 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SurveyApp.Queries.Contracts
 {
     public interface IGetOpenSurveysQuery
     {
-        IList<SurveyDto> Execute();
+        Task<IList<SurveyDto>> Execute();
     }
 }

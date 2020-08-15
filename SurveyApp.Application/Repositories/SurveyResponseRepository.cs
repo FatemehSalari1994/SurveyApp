@@ -4,6 +4,7 @@ using SurveyApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SurveyApp.Application.Repositories
 {
@@ -14,7 +15,7 @@ namespace SurveyApp.Application.Repositories
         {
             _surveyDbContext = surveyDbContext;
         }
-        public void Add(SurveyResponse surveyResponse)
+        public async Task Add(SurveyResponse surveyResponse)
         {
             _surveyDbContext.SurveyResponses.Add(surveyResponse);
             _surveyDbContext.SaveChanges();

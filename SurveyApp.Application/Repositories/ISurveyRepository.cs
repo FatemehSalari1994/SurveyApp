@@ -2,13 +2,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SurveyApp.Application.Repositories
 {
     public interface ISurveyRepository
     {
-        void Add(Survey survey);
-        Survey FindById(int id);
-        void Update(Survey survey);
+        Task Add(Survey survey);
+        Task<Survey> FindById(int id);
+        Task Update(Survey survey);
     }
 }

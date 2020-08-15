@@ -48,67 +48,61 @@ namespace SurveyApp.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Define(SurveyViewModel surveyViewModel)
+        public async Task<IActionResult> Define(SurveyViewModel surveyViewModel)
         {
-            _defineSurveyCommand.Execute(surveyViewModel);
+            await _defineSurveyCommand.Execute(surveyViewModel);
             return RedirectToAction("ShowOpenSurveys");
         }
 
-        public ActionResult ShowOpenSurveys()
+        public async Task<IActionResult> ShowOpenSurveys()
         {
-            return View(_getOpenSurveyQuery.Execute());
+            return View(await _getOpenSurveyQuery.Execute());
         }
 
-        public ActionResult ShowCloseSurveys()
-        {
-            return View(_getCloseSurveyQuery.Execute());
-        }
+        public async Task<IActionResult> ShowCloseSurveys()
+            => View(await _getCloseSurveyQuery.Execute());
+        
 
         public IActionResult AddQuestion(int id)
-        {
-            return View();
-        }
+            => View();
+        
 
         [HttpPost]
-        public IActionResult AddQuestion(int id,QuestionViewModel questionViewModel)
+        public async Task<IActionResult> AddQuestion(int id,QuestionViewModel questionViewModel)
         {
             questionViewModel.SelectionsTitles = questionViewModel.SelectionsTitles[0].Split(',');
-            _addQuestionToSurveyCommand.Execute(id,questionViewModel);
+            await _addQuestionToSurveyCommand.Execute(id,questionViewModel);
             return RedirectToAction("ShowOpenSurveys");
         }
 
-        public IActionResult ShowDetails(int id)
-        {
-            return View(_getSurveyByIdQuery.Execute(id));
-        }
+        public async Task<IActionResult> ShowDetails(int id)
+            => View(await _getSurveyByIdQuery.Execute(id));
+        
 
-        public IActionResult Open(int id)
+        public async Task<IActionResult> Open(int id)
         {
-            _openSurveyCommand.Execute(id);
+            await _openSurveyCommand.Execute(id);
             return RedirectToAction("ShowOpenSurveys");
         }
 
-        public IActionResult Close(int id)
+        public async Task<IActionResult> Close(int id)
         {
-            _closeSurveyCommand.Execute(id);
+            await _closeSurveyCommand.Execute(id);
             return RedirectToAction("ShowOpenSurveys");
         }
 
-        public IActionResult Report(int id)
-        {
-            return View(_getSurveyResponseReportQuery.Execute(id));
-        }
+        public async Task<IActionResult> Report(int id)
+            => View(await _getSurveyResponseReportQuery.Execute(id));
+        
 
-        public IActionResult ResponseSurvey(int id)
-        {
-
-            return View(_getSurveyByIdQuery.Execute(id));
-        }
+        public async Task<IActionResult> ResponseSurvey(int id)
+            => View(await _getSurveyByIdQuery.Execute(id));
+        
 
         [HttpPost]
-        public IActionResult ResponseSurvey(int id,SurveyResponseViewModel surveyResponseViewModel)
+        public async Task<IActionResult> ResponseSurvey(int id,SurveyResponseViewModel surveyResponseViewModel)
         {
-            _responseSurveyCommand.Execute(id, surveyResponseViewModel);
+            await _responseSurveyCommand.Execute(id, surveyResponseViewModel);
             return RedirectToAction("ShowOpenSurveys");
         }
 

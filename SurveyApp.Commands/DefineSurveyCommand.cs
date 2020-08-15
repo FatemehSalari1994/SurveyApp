@@ -5,7 +5,9 @@ using SurveyApp.Application.Services;
 using SurveyApp.Models;
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SurveyApp.Commands
 {
@@ -19,7 +21,7 @@ namespace SurveyApp.Commands
             _surveyRepository = surveyRepository;
             _dateTime = dateTime;
         }
-        public void Execute(SurveyViewModel surveyViewModel)
+        public async Task Execute(SurveyViewModel surveyViewModel)
         {
             var survey = new Survey
             {
@@ -29,7 +31,8 @@ namespace SurveyApp.Commands
                 CoordinatorId=surveyViewModel.CoordinatorId
             };
 
-            _surveyRepository.Add(survey);
+             await _surveyRepository.Add(survey);
+   
         }
     }
 }

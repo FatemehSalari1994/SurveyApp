@@ -30,33 +30,22 @@ namespace SurveyApp.API.Controllers
 
         [HttpPost]
         public async Task Define([FromBody]SurveyViewModel surveyViewModel)
-            => await Task.Run(() =>
-            {
-                _defineSurveyCommand.Execute(surveyViewModel);
-            });
+            => await _defineSurveyCommand.Execute(surveyViewModel);
+            
 
         [HttpPost("{id}/question")]
         public async Task AddQuestion([FromRoute]int id, QuestionViewModel questionDto)
-            => await Task.Run(() =>
-            {
-                _addQuestionToSurveyCommand.Execute(id, questionDto);
-            });
+            => await _addQuestionToSurveyCommand.Execute(id, questionDto);
 
         
         [HttpPost("{id}/open")]
         public async Task Open([FromRoute]int id)
-            => await Task.Run(() =>
-            {
-                _openSurveyCommand.Execute(id);
-            });
+            => await  _openSurveyCommand.Execute(id);
 
        
         [HttpPost("{id}/close")]
         public async Task Close([FromRoute]int id)
-            => await Task.Run(() =>
-            {
-                _closeSurveyCommand.Execute(id);
-            });
+            => await _closeSurveyCommand.Execute(id);
 
     }
 }
